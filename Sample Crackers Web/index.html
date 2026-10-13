@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium Diwali crackers, fireworks, sparklers, sky shots, fancy fountains and gift combo packs. Light up your Diwali with a trusted local store." />
+  <meta name="theme-color" content="#0b0a2a" />
+  <title>Diya Burst Crackers — Light Up Your Diwali</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='%23f5a623'/%3E%3Cpath d='M32 10l4 10 10 2-8 7 3 11-9-6-9 6 3-11-8-7 10-2z' fill='%23fff'/%3E%3C/svg%3E" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============== ANNOUNCEMENT BAR ============== -->
+  <div class="announcement-bar" role="region" aria-label="Festive announcement">
+    <div class="container announcement-bar__inner">
+      <span class="announcement-bar__icon" aria-hidden="true">🪔</span>
+      <p class="announcement-bar__text">
+        <strong>Diwali Special:</strong> Free local delivery on orders above ₹2,500 ·
+        <span class="announcement-bar__highlight">Pre-book your combo packs today!</span>
+      </p>
+      <button class="announcement-bar__close" aria-label="Dismiss announcement" type="button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============== HEADER / NAVBAR ============== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a href="#home" class="brand" aria-label="Diya Burst Crackers — Home">
+        <span class="brand__logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="brandGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffd166" />
+                <stop offset="60%" stop-color="#f5a623" />
+                <stop offset="100%" stop-color="#e85d04" />
+              </radialGradient>
+            </defs>
+            <circle cx="32" cy="32" r="28" fill="url(#brandGrad)" />
+            <g stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none">
+              <line x1="32" y1="8" x2="32" y2="18" />
+              <line x1="32" y1="46" x2="32" y2="56" />
+              <line x1="8" y1="32" x2="18" y2="32" />
+              <line x1="46" y1="32" x2="56" y2="32" />
+              <line x1="15" y1="15" x2="22" y2="22" />
+              <line x1="42" y1="42" x2="49" y2="49" />
+              <line x1="49" y1="15" x2="42" y2="22" />
+              <line x1="22" y1="42" x2="15" y2="49" />
+            </g>
+            <circle cx="32" cy="32" r="6" fill="#fff" />
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Diya Burst</span>
+          <span class="brand__tag">Crackers & Fireworks</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link">Home</a></li>
+          <li><a href="#shop" class="nav__link">Shop Crackers</a></li>
+          <li><a href="#categories" class="nav__link">Categories</a></li>
+          <li><a href="#about" class="nav__link">About Us</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Open search" type="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="icon-btn cart-btn" id="cartToggle" aria-label="Open cart" type="button">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-btn__count" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <a class="btn btn--whatsapp header__whatsapp" id="headerWhatsApp" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>Order on WhatsApp</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search bar (collapsible) -->
+    <div class="search-bar" id="searchBar" hidden>
+      <div class="container search-bar__inner">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <label class="sr-only" for="searchInput">Search products</label>
+        <input type="search" id="searchInput" class="search-bar__input" placeholder="Search sparklers, sky shots, gift boxes..." autocomplete="off" />
+        <button class="search-bar__close" id="searchClose" aria-label="Close search" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero" id="home" aria-label="Diwali hero">
+    <div class="hero__bg" aria-hidden="true">
+      <div class="fireworks" id="fireworks"></div>
+      <div class="hero__glow"></div>
+    </div>
+
+    <div class="container hero__inner">
+      <div class="hero__content reveal">
+        <span class="hero__badge">
+          <i class="fa-solid fa-star" aria-hidden="true"></i>
+          Diwali 2026 Collection
+        </span>
+        <h1 class="hero__title">
+          Light Up <span class="hero__title-accent">Your Diwali.</span>
+        </h1>
+        <p class="hero__subtitle">
+          Celebrate every moment with a spectacular festive collection —
+          handpicked sparklers, sky shots, fancy fountains and gift combos for the whole family.
+        </p>
+        <div class="hero__ctas">
+          <a href="#shop" class="btn btn--primary btn--lg">
+            <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+            Explore Our Collection
+          </a>
+          <a href="#" class="btn btn--ghost btn--lg" id="heroWhatsApp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            Order on WhatsApp
+          </a>
+        </div>
+        <ul class="hero__perks">
+          <li><i class="fa-solid fa-shield-halved"></i> Licensed &amp; safety-checked stock</li>
+          <li><i class="fa-solid fa-truck-fast"></i> Local delivery &amp; store pickup</li>
+          <li><i class="fa-solid fa-hand-holding-heart"></i> Family-friendly combos</li>
+        </ul>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <div class="hero__card hero__card--1">
+          <div class="hero__card-inner">
+            <span class="hero__card-emoji">🎆</span>
+            <span class="hero__card-label">Sky Shots</span>
+          </div>
+        </div>
+        <div class="hero__card hero__card--2">
+          <div class="hero__card-inner">
+            <span class="hero__card-emoji">✨</span>
+            <span class="hero__card-label">Sparklers</span>
+          </div>
+        </div>
+        <div class="hero__card hero__card--3">
+          <div class="hero__card-inner">
+            <span class="hero__card-emoji">🎁</span>
+            <span class="hero__card-label">Gift Boxes</span>
+          </div>
+        </div>
+        <div class="hero__offer-chip">
+          <span class="hero__offer-chip-label">Festive Offer</span>
+          <span class="hero__offer-chip-text">Pre-book &amp; save</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ============== CATEGORIES ============== -->
+  <section class="section categories" id="categories" aria-labelledby="categoriesTitle">
+    <div class="container">
+      <header class="section__head reveal">
+        <span class="section__eyebrow">Shop by category</span>
+        <h2 class="section__title" id="categoriesTitle">Find Your Favourite Fireworks</h2>
+        <p class="section__subtitle">From gentle sparklers for the little ones to thundering sky shots for the grand finale — pick a category to filter the catalogue.</p>
+      </header>
+
+      <div class="categories__grid">
+        <!-- Category cards are rendered by JS from CATEGORIES array -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FEATURED PRODUCTS ============== -->
+  <section class="section products" id="shop" aria-labelledby="shopTitle">
+    <div class="container">
+      <header class="section__head reveal">
+        <span class="section__eyebrow">Featured products</span>
+        <h2 class="section__title" id="shopTitle">This Season's Bestsellers</h2>
+        <p class="section__subtitle">Browse our curated Diwali range. Tap any product for a quick view, or add it straight to your cart.</p>
+      </header>
+
+      <!-- Filters -->
+      <div class="filters reveal" role="toolbar" aria-label="Product filters">
+        <div class="filters__chips" id="categoryChips" role="tablist">
+          <!-- Rendered by JS -->
+        </div>
+        <div class="filters__sort">
+          <label for="sortSelect" class="sr-only">Sort products</label>
+          <select id="sortSelect" class="filters__select">
+            <option value="featured">Sort: Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A → Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="products__grid" id="productsGrid" aria-live="polite">
+        <!-- Rendered by JS -->
+      </div>
+
+      <p class="products__empty" id="productsEmpty" hidden>No products match your search. Try a different keyword or category.</p>
+    </div>
+  </section>
+
+  <!-- ============== FESTIVE OFFER ============== -->
+  <section class="section offer" aria-labelledby="offerTitle">
+    <div class="offer__bg" aria-hidden="true">
+      <div class="offer__sparks"></div>
+    </div>
+    <div class="container offer__inner reveal">
+      <span class="offer__eyebrow">Festive offer</span>
+      <h2 class="offer__title" id="offerTitle">Make This Diwali Unforgettable</h2>
+      <p class="offer__text">
+        Pre-book your Diwali combo packs and enjoy festive pricing, priority delivery slots and a free safety kit with every order above ₹3,000.
+        <em class="offer__note">(Offer text is editable — update in the CONFIG object.)</em>
+      </p>
+      <div class="offer__ctas">
+        <a href="#shop" class="btn btn--gold btn--lg">
+          <i class="fa-solid fa-gift" aria-hidden="true"></i>
+          Shop Combos
+        </a>
+        <a href="#" class="btn btn--ghost-light btn--lg" id="offerWhatsApp" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Enquire on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== WHY CHOOSE US ============== -->
+  <section class="section why" aria-labelledby="whyTitle">
+    <div class="container">
+      <header class="section__head reveal">
+        <span class="section__eyebrow">Why shop with us</span>
+        <h2 class="section__title" id="whyTitle">Trusted by Families Across the City</h2>
+      </header>
+
+      <div class="why__grid">
+        <article class="why__card reveal">
+          <div class="why__icon"><i class="fa-solid fa-store"></i></div>
+          <h3 class="why__title">Trusted Local Store</h3>
+          <p class="why__text">Serving our neighbourhood for Diwali season after season — visit us in-store or order from home.</p>
+        </article>
+        <article class="why__card reveal">
+          <div class="why__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <h3 class="why__title">Transparent Pricing</h3>
+          <p class="why__text">Clear MRP on every product, no hidden charges. What you see is what you pay.</p>
+        </article>
+        <article class="why__card reveal">
+          <div class="why__icon"><i class="fa-solid fa-headset"></i></div>
+          <h3 class="why__title">Helpful Support</h3>
+          <p class="why__text">Not sure which combo is right for your family? Message us on WhatsApp — we'll help you choose.</p>
+        </article>
+        <article class="why__card reveal">
+          <div class="why__icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <h3 class="why__title">Convenient Ordering</h3>
+          <p class="why__text">Browse online, build your cart, and confirm availability and delivery directly with our team.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ABOUT ============== -->
+  <section class="section about" id="about" aria-labelledby="aboutTitle">
+    <div class="container about__inner">
+      <div class="about__visual reveal" aria-hidden="true">
+        <div class="about__visual-frame">
+          <div class="about__visual-deco about__visual-deco--1"></div>
+          <div class="about__visual-deco about__visual-deco--2"></div>
+          <div class="about__visual-inner">
+            <span class="about__visual-emoji">🪔</span>
+            <span class="about__visual-text">Since <strong id="aboutYear">2010</strong></span>
+          </div>
+        </div>
+      </div>
+      <div class="about__content reveal">
+        <span class="section__eyebrow">About us</span>
+        <h2 class="section__title" id="aboutTitle">A Family Business, Built for Festive Moments</h2>
+        <p class="about__text">
+          <strong id="aboutBrand">Diya Burst Crackers</strong> is a family-run store based in
+          <span id="aboutCity">Sivakasi, Tamil Nadu</span>. For over
+          <span id="aboutYears">15</span> years, we've helped families celebrate Diwali with a carefully curated range of crackers, sparklers and gift combos — all sourced from licensed manufacturers and checked for safety before they reach your hands.
+        </p>
+        <p class="about__text">
+          We believe Diwali is about togetherness, light and joy. That's why we keep our pricing transparent, our advice honest, and our stock fresh every season.
+        </p>
+        <ul class="about__facts">
+          <li><i class="fa-solid fa-check"></i> Licensed stock from verified manufacturers</li>
+          <li><i class="fa-solid fa-check"></i> In-store &amp; local delivery options</li>
+          <li><i class="fa-solid fa-check"></i> Family-friendly combos for every budget</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HOW TO ORDER ============== -->
+  <section class="section how" aria-labelledby="howTitle">
+    <div class="container">
+      <header class="section__head reveal">
+        <span class="section__eyebrow">How to order</span>
+        <h2 class="section__title" id="howTitle">Three Simple Steps</h2>
+      </header>
+
+      <ol class="how__steps">
+        <li class="how__step reveal">
+          <div class="how__step-num">1</div>
+          <h3 class="how__step-title">Browse the catalogue</h3>
+          <p class="how__step-text">Explore categories, filter by type, and check prices — all online, at your pace.</p>
+        </li>
+        <li class="how__step reveal">
+          <div class="how__step-num">2</div>
+          <h3 class="how__step-title">Select your products</h3>
+          <p class="how__step-text">Add items to your cart, adjust quantities, and build the perfect Diwali basket.</p>
+        </li>
+        <li class="how__step reveal">
+          <div class="how__step-num">3</div>
+          <h3 class="how__step-title">Confirm with us</h3>
+          <p class="how__step-text">Send your cart on WhatsApp. We'll confirm availability, delivery or pickup, and final pricing.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section class="section contact" id="contact" aria-labelledby="contactTitle">
+    <div class="container contact__inner">
+      <div class="contact__info reveal">
+        <span class="section__eyebrow">Get in touch</span>
+        <h2 class="section__title" id="contactTitle">Visit, Call or Message</h2>
+        <p class="contact__intro">We're happy to help you plan your Diwali shopping. Reach out through any of the channels below.</p>
+
+        <ul class="contact__list">
+          <li>
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <div>
+              <span class="contact__label">Phone</span>
+              <a href="tel:" id="contactPhone">+91 00000 00000</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <div>
+              <span class="contact__label">WhatsApp</span>
+              <a href="#" id="contactWhatsApp" target="_blank" rel="noopener">Chat with us</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <div>
+              <span class="contact__label">Email</span>
+              <a href="mailto:" id="contactEmail">hello@example.com</a>
+            </div>
+          </li>
+          <li>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <div>
+              <span class="contact__label">Address</span>
+              <span id="contactAddress">Main Road, Your City, India</span>
+            </div>
+          </li>
+          <li>
+            <i class="fa-regular fa-clock" aria-hidden="true"></i>
+            <div>
+              <span class="contact__label">Business hours</span>
+              <span id="contactHours">Mon–Sun · 9:00 AM – 10:00 PM</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact__socials" id="contactSocials">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <form class="contact__form reveal" id="contactForm" novalidate>
+        <h3 class="contact__form-title">Send us a message</h3>
+        <div class="form-field">
+          <label for="cf-name">Your name</label>
+          <input type="text" id="cf-name" name="name" required autocomplete="name" />
+        </div>
+        <div class="form-field">
+          <label for="cf-phone">Phone number</label>
+          <input type="tel" id="cf-phone" name="phone" required autocomplete="tel" />
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email (optional)</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" />
+        </div>
+        <div class="form-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--lg btn--full">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          Send message
+        </button>
+        <p class="contact__form-note">
+          <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+          This form is a frontend demo. To receive messages, connect it to a form service (Formspree, Web3Forms, or your own backend).
+        </p>
+        <p class="contact__form-status" id="contactFormStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============== SAFETY NOTICE ============== -->
+  <section class="safety" aria-labelledby="safetyTitle">
+    <div class="container safety__inner">
+      <h2 class="safety__title" id="safetyTitle"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Safety first</h2>
+      <ul class="safety__list">
+        <li>Crackers must be used only under adult supervision and in open, safe areas.</li>
+        <li>Follow local laws regarding age, timing, and permitted types of fireworks.</li>
+        <li>Keep water, a first-aid kit and a safe distance handy while lighting crackers.</li>
+        <li>Availability, delivery and orders are subject to confirmation by the business.</li>
+      </ul>
+      <p class="safety__links">
+        For official guidance, see:
+        <a href="https://www.peacemaker.gov.in/" target="_blank" rel="noopener">MoH&amp;FW — Fireworks Safety</a> ·
+        <a href="https://en.wikipedia.org/wiki/Fireworks_safety" target="_blank" rel="noopener">Fireworks safety (Wikipedia)</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__col footer__brand-col">
+        <a href="#home" class="brand brand--footer">
+          <span class="brand__logo" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" fill="#f5a623" />
+              <g stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none">
+                <line x1="32" y1="8" x2="32" y2="18" />
+                <line x1="32" y1="46" x2="32" y2="56" />
+                <line x1="8" y1="32" x2="18" y2="32" />
+                <line x1="46" y1="32" x2="56" y2="32" />
+              </g>
+              <circle cx="32" cy="32" r="6" fill="#fff" />
+            </svg>
+          </span>
+          <span class="brand__text">
+            <span class="brand__name" id="footerBrand">Diya Burst</span>
+            <span class="brand__tag">Crackers &amp; Fireworks</span>
+          </span>
+        </a>
+        <p class="footer__about">A trusted local store for Diwali crackers, sparklers and festive gift combos. Licensed stock, transparent pricing, helpful support.</p>
+        <div class="footer__socials" id="footerSocials"></div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Quick links</h4>
+        <ul class="footer__links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop Crackers</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Categories</h4>
+        <ul class="footer__links" id="footerCategories"></ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__links footer__contact">
+          <li><i class="fa-solid fa-location-dot"></i> <span id="footerAddress">Main Road, Your City</span></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:" id="footerPhone">+91 00000 00000</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:" id="footerEmail">hello@example.com</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__copy">&copy; <span id="footerYear"></span> <span id="footerBrand2">Diya Burst Crackers</span>. All rights reserved.</p>
+        <ul class="footer__legal">
+          <li><a href="#safety">Safety info</a></li>
+          <li><a href="#" id="privacyLink">Privacy policy</a></li>
+          <li><a href="#" id="termsLink">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== CART DRAWER ============== -->
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <header class="cart-drawer__head">
+      <h2 class="cart-drawer__title"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Your Cart</h2>
+      <button class="icon-btn" id="cartClose" aria-label="Close cart" type="button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </header>
+
+    <div class="cart-drawer__body" id="cartBody">
+      <!-- Rendered by JS -->
+    </div>
+
+    <footer class="cart-drawer__foot" id="cartFoot" hidden>
+      <div class="cart-drawer__totals">
+        <div class="cart-drawer__row">
+          <span>Subtotal</span>
+          <strong id="cartSubtotal">₹0</strong>
+        </div>
+        <div class="cart-drawer__row cart-drawer__row--total">
+          <span>Estimated total</span>
+          <strong id="cartTotal">₹0</strong>
+        </div>
+        <p class="cart-drawer__note">Final price, availability and delivery will be confirmed on WhatsApp.</p>
+      </div>
+      <div class="cart-drawer__actions">
+        <button class="btn btn--ghost" id="cartClear" type="button">
+          <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Clear cart
+        </button>
+        <a class="btn btn--whatsapp btn--lg" id="cartWhatsApp" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          Order on WhatsApp
+        </a>
+      </div>
+    </footer>
+  </aside>
+
+  <!-- ============== QUICK VIEW MODAL ============== -->
+  <dialog class="modal" id="quickViewModal" aria-labelledby="qvTitle">
+    <div class="modal__inner">
+      <button class="modal__close" id="qvClose" aria-label="Close quick view" type="button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal__body" id="qvBody">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============== FLOATING WHATSAPP ============== -->
+  <a class="fab fab--whatsapp" id="fabWhatsApp" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    <span class="fab__pulse"></span>
+  </a>
+
+  <!-- ============== TOASTS ============== -->
+  <div class="toasts" id="toasts" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
